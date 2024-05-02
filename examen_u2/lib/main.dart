@@ -85,11 +85,12 @@ void addToTotalAndUpdateNumbers4(int number) {
 
   @override
   Widget build(BuildContext context) {
-    double size = 450.0;
+    double size = 150;
 
     BoxDecoration cajaRedonda(Color fondo) => BoxDecoration(
         borderRadius: BorderRadius.circular(7),
         color: fondo,
+        border: Border.all(color: Colors.black45, width: 4)
         );
 
     return Scaffold(
@@ -125,23 +126,26 @@ void addToTotalAndUpdateNumbers4(int number) {
                       children: [ // Inicio de children
                         Container(
                           decoration: cajaRedonda(Colors.red),
-                          height: size / 3,
-                          width: size / 3,
+                          height: size,
+                          width: size/2,
                         ),
+                        SizedBox(width:20),
                         Container(
                           decoration: cajaRedonda(Colors.yellow),
-                          height: size / 3,
-                          width: size / 3,
+                          height: size,
+                          width: size / 2,
                         ),
+                        SizedBox(width:20),
                         Container(
                           decoration: cajaRedonda(Colors.blue),
-                          height: size / 3,
-                          width: size / 3,
+                          height: size,
+                          width: size / 2,
                         ),
+                        SizedBox(width:20),
                         Container(
                           decoration: cajaRedonda(Colors.green),
-                          height: size / 3,
-                          width: size / 3,
+                          height: size,
+                          width: size / 2,
                         ),
                       ], // Fin de children
                     ), // Fin de Row
@@ -175,41 +179,44 @@ void addToTotalAndUpdateNumbers4(int number) {
                           onTap: () => addToTotalAndUpdateNumbers(randomNumber),
                           child: Container(
                             decoration: cajaRedonda(Colors.red),
-                            height: size / 3,
-                            width: size / 3,
+                            height: size,
+                            width: size / 2,
                             child: Center(
                               child: Text(randomNumber.toString()),
                             ),
                           ),
                         ),
+                        SizedBox(width:20),
                         GestureDetector(
                           onTap: () => addToTotalAndUpdateNumbers2(randomNum1),
                           child: Container(
                             decoration: cajaRedonda(Colors.orange),
-                            height: size / 3,
-                            width: size / 3,
+                            height: size,
+                            width: size / 2,
                             child: Center(
                               child: Text(randomNum1.toString()),
                             ),
                           ),
                         ),
+                        SizedBox(width:20),
                         GestureDetector(
                           onTap: () => addToTotalAndUpdateNumbers3(randomNum2),
                           child: Container(
                             decoration: cajaRedonda(Colors.pink),
-                            height: size / 3,
-                            width: size / 3,
+                            height: size,
+                            width: size / 2,
                             child: Center(
                               child: Text(randomNum2.toString()),
                             ),
                           ),
                         ),
+                        SizedBox(width:20),
                         GestureDetector(
                           onTap: () => addToTotalAndUpdateNumbers4(randomNum3),
                           child: Container(
                             decoration: cajaRedonda(Colors.green),
-                            height: size / 3,
-                            width: size / 3,
+                            height: size,
+                            width: size / 2,
                             child: Center(
                               child: Text(randomNum3.toString()),
                             ),
